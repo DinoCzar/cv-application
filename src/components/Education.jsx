@@ -1,5 +1,5 @@
-function Educational() {
+function Education() {
 	return <div className='section'>Education</div>;
 }
 
-export default Educational;
+export default Education;
