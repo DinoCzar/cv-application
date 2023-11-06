@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import Greeting from './components/Greeting';
+import General from './components/General';
+import Educational from './components/Educational';
+import Practical from './components/Practical';
 import './styles/App.css';
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
 
 	return (
 		<>
-			<Greeting />
+      <General />
+      <Educational />
+      <Practical />
 			<div>
 				<a href='https://vitejs.dev' target='_blank'>
 					<img src={viteLogo} className='logo' alt='Vite logo' />
