@@ -63,9 +63,9 @@ function App() {
 				</div>
 				<div id='cv'>
 					<div id='personal'>
-						<div id='display-name'>{nameValue}</div>
-						<div id='display-phone'>{phoneValue}</div>
-						<div id='display-address'>{addressValue}</div>
+						<div className='display' id='display-name'>{nameValue}</div>
+						<div className='display' id='display-phone'>{phoneValue}</div>
+						<div className='display' id='display-address'>{addressValue}</div>
 					</div>
 					<Education />
 					<Experience />

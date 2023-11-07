@@ -33,6 +33,14 @@ div {
 	padding-bottom: 20px;
 }
 
+.display {
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+}
+
 #submit-div {
 	display: grid;
 	justify-content: center;
