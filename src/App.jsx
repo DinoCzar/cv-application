@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Personal from './components/Personal';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Input from './components/Input';
@@ -7,7 +6,7 @@ import Button from './components/Button';
 import './styles/App.css';
 
 function App() {
-  const [educationValue, setEducationValue] = useState('');
+  const [personalValue, setPersonalValue] = useState('');
 
   const handleButtonClick = (url) => {
     window.location.href = url;
@@ -44,18 +43,18 @@ function App() {
           <div id='education'>
             <input
               type="text"
-              value={educationValue}
-              onChange={(e) => setEducationValue(e.target.value)}
+              value={personalValue}
+              onChange={(e) => setPersonalValue(e.target.value)}
               placeholder="Enter your education information"
             />
           </div>
           <div id='display-education'>
-            {educationValue}
+            {personalValue}
           </div>
           <div id='experience'></div>
         </div>
         <div id='cv'>
-          <Personal />
+			<div id = 'personal' >{personalValue}</div>
           <Education />
           <Experience />
         </div>
