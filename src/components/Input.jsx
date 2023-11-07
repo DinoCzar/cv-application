@@ -1,21 +1,16 @@
-function Input() {
+function Input({name, placeholder, id}) {
+    const formInfo = {
+        name: name,
+        placeholder: placeholder,
+        id: id
+    };
+
 	return (
 		<div id='modal'>
 			<fieldset>
 				<legend>Add New Book</legend>
 				<div class='form'>
-					<input type='text' name='name' id='name' placeholder='Name' />
-				</div>
-				<div class='form'>
-					<input type='text' name='phone' id='phone' placeholder='Phone' />
-				</div>
-				<div class='form'>
-					<input type='text' name='city' id='city' placeholder='City' />
-				</div>
-				<div id='submit-button'>
-					<button type='submit' id='submit'>
-						Submit
-					</button>
+					<input type='text' name={formInfo.name} id={formInfo.id} placeholder={formInfo.placeholder} />
 				</div>
 			</fieldset>
 		</div>
