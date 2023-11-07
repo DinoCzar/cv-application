@@ -22,11 +22,13 @@ div {
 
 #cv {
 	display: grid;
+	align-content: start;
 }
 
 #cv-personal {
 	background-color: #082f49;
 	color: white;
+	display: grid;
 }
 
 #submit-div {
