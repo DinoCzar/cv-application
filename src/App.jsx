@@ -13,9 +13,6 @@ function App() {
 
 	return (
 		<>
-			<div>
-				<Button handleClick={handleButtonClick} />
-			</div>
 			<div id='container'>
 				<div id='sidebar'>
 					<div id='view'>
@@ -50,6 +47,9 @@ function App() {
 					<Education />
 					<Experience />
 				</div>
+			</div>
+			<div id='submit-div'>
+				<Button handleClick={handleButtonClick} />
 			</div>
 		</>
 	);

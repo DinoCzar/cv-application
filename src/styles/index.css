@@ -11,6 +11,25 @@ body {
 div {
 	border: solid;
 	border-width: 1px;
-	padding: 12px;
+	padding: 10px;
 }
 
+#container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+}
+
+#cv {
+	display: grid;
+}
+
+#cv-personal {
+	background-color: #082f49;
+	color: white;
+}
+
+#submit-div {
+	display: grid;
+	justify-content: center;
+}

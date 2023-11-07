@@ -1,5 +1,5 @@
 function Personal() {
-	return <div className='section'>Personal</div>;
+	return <div id='cv-personal' className='section'>Personal</div>;
 }
 
 export default Personal;
