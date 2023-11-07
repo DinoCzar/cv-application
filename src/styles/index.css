@@ -11,5 +11,6 @@ body {
 div {
 	border: solid;
 	border-width: 1px;
+	padding: 12px;
 }
 

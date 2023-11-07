@@ -13,9 +13,6 @@ function App() {
 
 	return (
 		<>
-			<Input placeholder='Name' id='name' name='name' />
-			<Input placeholder='Phone' id='phone' name='phone' />
-			<Input placeholder='City' id='city' name='city' />
 			<div>
 				<Button handleClick={handleButtonClick} />
 			</div>
@@ -26,12 +23,24 @@ function App() {
 						<div id='example'></div>
 					</div>
 					<div id='personal'>
-						<div id='name'>
-							<Input />
-						</div>
-						<div id='email'></div>
-						<div id='phone'></div>
-						<div id='city'></div>
+						<Input
+							legend={'Full Name'}
+							placeholder='Name'
+							id='name'
+							name='name'
+						/>
+						<Input
+							legend={'Phone'}
+							placeholder='Phone'
+							id='phone'
+							name='phone'
+						/>
+						<Input
+							legend={'Address'}
+							placeholder='City, State'
+							id='address'
+							name='address'
+						/>
 					</div>
 					<div id='education'></div>
 					<div id='experience'></div>

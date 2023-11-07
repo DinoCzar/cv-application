@@ -1,4 +1,4 @@
-function Input({name, placeholder, id}) {
+function Input({legend, name, placeholder, id}) {
     const formInfo = {
         name: name,
         placeholder: placeholder,
@@ -7,7 +7,7 @@ function Input({name, placeholder, id}) {
 
 	return (
 		<div className='user-input'>
-				<legend>Add New Book</legend>
+				<legend>{legend}</legend>
 				<div class='form'>
 					<input type='text' name={formInfo.name} id={formInfo.id} placeholder={formInfo.placeholder} />
 				</div>
