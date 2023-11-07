@@ -6,14 +6,22 @@ import Button from './components/Button';
 import './styles/App.css';
 
 function App() {
-	const [personalValue, setPersonalValue] = useState('');
+	const [nameValue, setNameValue] = useState('');
+	const [phoneValue, setPhoneValue] = useState('');
+	const [addressValue, setAddressValue] = useState('');
 
 	const handleButtonClick = (url) => {
 		window.location.href = url;
 	};
 
-	const handleFullNameChange = (e) => {
-		setPersonalValue(e.target.value);
+	const handleNameValueChange = (e) => {
+		setNameValue(e.target.value);
+	};
+	const handlePhoneValueChange = (e) => {
+		setPhoneValue(e.target.value);
+	};
+	const handleAddressValueChange = (e) => {
+		setAddressValue(e.target.value);
 	};
 
 	return (
@@ -30,28 +38,35 @@ function App() {
 							placeholder='Name'
 							id='name'
 							name='name'
-							type='text'
-							value={personalValue}
-							onChange={(e) => setPersonalValue(e.target.value)} />
-					
+							value={nameValue}
+							onChange={(e) => setNameValue(e.target.value)}
+						/>
 						<Input
 							legend={'Phone'}
 							placeholder='Phone'
 							id='phone'
 							name='phone'
+							value={phoneValue}
+							onChange={(e) => setPhoneValue(e.target.value)}
 						/>
 						<Input
 							legend={'Address'}
 							placeholder='City, State'
 							id='address'
 							name='address'
+							value={addressValue}
+							onChange={(e) => setAddressValue(e.target.value)}
 						/>
 					</div>
 					<div id='education'></div>
 					<div id='experience'></div>
 				</div>
 				<div id='cv'>
-					<div id='personal'>{personalValue}</div>
+					<div id='personal'>
+						<div id='display-name'>{nameValue}</div>
+						<div id='display-phone'>{phoneValue}</div>
+						<div id='display-address'>{addressValue}</div>
+					</div>
 					<Education />
 					<Experience />
 				</div>
