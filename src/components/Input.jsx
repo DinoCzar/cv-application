@@ -2,7 +2,7 @@ function Input({legend, name, placeholder, id}) {
     const formInfo = {
         name: name,
         placeholder: placeholder,
-        id: id
+        id: id,
     };
 
 	return (

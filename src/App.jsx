@@ -12,6 +12,11 @@ function App() {
     window.location.href = url;
   };
 
+  // Function to handle changes in the 'Full Name' input
+  const handleFullNameChange = (e) => {
+    setPersonalValue(e.target.value);
+  };
+
   return (
     <>
       <div id='container'>
@@ -21,12 +26,19 @@ function App() {
             <div id='example'></div>
           </div>
           <div id='personal'>
-            <Input
+            <input
+			
               legend={'Full Name'}
               placeholder='Name'
               id='name'
               name='name'
-            />
+    
+
+			  type="text"
+              value={personalValue}
+              onChange={(e) => setPersonalValue(e.target.value)}>
+
+			  </input>
             <Input
               legend={'Phone'}
               placeholder='Phone'
@@ -41,20 +53,12 @@ function App() {
             />
           </div>
           <div id='education'>
-            <input
-              type="text"
-              value={personalValue}
-              onChange={(e) => setPersonalValue(e.target.value)}
-              placeholder="Enter your education information"
-            />
-          </div>
-          <div id='display-education'>
-            {personalValue}
+           
           </div>
           <div id='experience'></div>
         </div>
         <div id='cv'>
-			<div id = 'personal' >{personalValue}</div>
+          <div id='personal'>{personalValue}</div>
           <Education />
           <Experience />
         </div>
