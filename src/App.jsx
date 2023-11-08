@@ -14,10 +14,16 @@ function App() {
 	const [displayPhone, setDisplayPhone] = useState('');
 	const [displayAddress, setDisplayAddress] = useState('');
 
-	const handleButtonClick = () => {
+	const submitButtonClick = () => {
 		setNameValue('');
 		setPhoneValue('');
 		setAddressValue('');
+	};
+
+	const editButtonClick = () => {
+		setNameValue(displayName);
+		setPhoneValue(displayPhone);
+		setAddressValue(displayAddress);
 	};
 
 	return (
@@ -25,8 +31,7 @@ function App() {
 			<div id='container'>
 				<div id='sidebar'>
 					<div id='view'>
-						<div id='clear'></div>
-						<div id='example'></div>
+						<Button handleClick={editButtonClick} text='Edit' />
 					</div>
 					<div id='personal'>
 						<Input
@@ -83,7 +88,7 @@ function App() {
 				</div>
 			</div>
 			<div id='submit-div'>
-				<Button handleClick={handleButtonClick} />
+				<Button handleClick={submitButtonClick} text='Submit' />
 			</div>
 		</>
 	);

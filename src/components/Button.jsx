@@ -1,5 +1,5 @@
 function Button({
-	text = 'Submit',
+	text = 'text',
 	color = 'white',
 	fontSize = 12,
 	handleClick,
@@ -23,7 +23,7 @@ function Button({
 
 	return (
 		<button
-			onClick={() => handleClick('https://www.theodinproject.com')}
+			onClick={() => handleClick()}
 			style={buttonStyle}
 		>
 			{text}
