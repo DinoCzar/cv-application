@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Education from './components/Education';
-import Experience from './components/Experience';
 import Input from './components/Input';
 import Button from './components/Button';
 import './styles/App.css';
