@@ -10,18 +10,12 @@ function App() {
 	const [phoneValue, setPhoneValue] = useState('');
 	const [addressValue, setAddressValue] = useState('');
 
-	const handleButtonClick = (url) => {
-		window.location.href = url;
-	};
+	const [displayName, setDisplayName] = useState('');
+	const [displayPhone, setDisplayPhone] = useState('');
+	const [displayAddress, setDisplayAddress] = useState('');
 
-	const handleNameValueChange = (e) => {
-		setNameValue(e.target.value);
-	};
-	const handlePhoneValueChange = (e) => {
-		setPhoneValue(e.target.value);
-	};
-	const handleAddressValueChange = (e) => {
-		setAddressValue(e.target.value);
+	const handleButtonClick = () => {
+		setNameValue('');
 	};
 
 	return (
@@ -39,7 +33,10 @@ function App() {
 							id='name'
 							name='name'
 							value={nameValue}
-							onChange={(e) => setNameValue(e.target.value)}
+							onChange={(e) => {
+								setDisplayName(e.target.value);
+								setNameValue(e.target.value);
+							}}
 						/>
 						<Input
 							legend={'Phone'}
@@ -63,9 +60,15 @@ function App() {
 				</div>
 				<div id='cv'>
 					<div id='personal'>
-						<div className='display' id='display-name'>{nameValue}</div>
-						<div className='display' id='display-phone'>{phoneValue}</div>
-						<div className='display' id='display-address'>{addressValue}</div>
+						<div className='display' id='display-name'>
+							{displayName}
+						</div>
+						<div className='display' id='display-phone'>
+							{displayPhone}
+						</div>
+						<div className='display' id='display-address'>
+							{displayAddress}
+						</div>
 					</div>
 					<Education />
 					<Experience />
