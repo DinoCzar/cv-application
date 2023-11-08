@@ -1,14 +1,13 @@
 function Button({
 	text = 'text',
 	color = 'white',
-	fontSize = 12,
+	fontSize = 14,
 	handleClick,
 	backgroundColor = '#082f49',
 	border = 'none',
-	borderRadius = '10px',
-	padding = '10px',
-	paddingLeft = '20px',
-	paddingRight = '20px'
+	borderRadius = '15px',
+	padding = '15px',
+	width = '85px'
 }) {
 	const buttonStyle = {
 		color: color,
@@ -17,8 +16,7 @@ function Button({
 		border: border,
 		borderRadius: borderRadius,
 		padding: padding,
-		paddingLeft: paddingLeft,
-		paddingRight: paddingRight
+		width: width
 	};
 
 	return (

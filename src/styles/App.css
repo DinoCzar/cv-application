@@ -45,3 +45,8 @@ div {
 	display: grid;
 	justify-content: center;
 }
+
+#view {
+	display: grid;
+	justify-content: center;
+}
