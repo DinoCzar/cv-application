@@ -16,6 +16,8 @@ function App() {
 
 	const handleButtonClick = () => {
 		setNameValue('');
+		setPhoneValue('');
+		setAddressValue('');
 	};
 
 	return (
@@ -44,7 +46,10 @@ function App() {
 							id='phone'
 							name='phone'
 							value={phoneValue}
-							onChange={(e) => setPhoneValue(e.target.value)}
+							onChange={(e) => {
+								setDisplayPhone(e.target.value);
+								setPhoneValue(e.target.value);
+							}}
 						/>
 						<Input
 							legend={'Address'}
@@ -52,7 +57,10 @@ function App() {
 							id='address'
 							name='address'
 							value={addressValue}
-							onChange={(e) => setAddressValue(e.target.value)}
+							onChange={(e) => {
+								setDisplayAddress(e.target.value);
+								setAddressValue(e.target.value);
+							}}
 						/>
 					</div>
 					<div id='education'></div>
