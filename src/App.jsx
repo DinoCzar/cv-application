@@ -40,10 +40,10 @@ function App() {
 						<Button handleClick={resetDisplay} text='Edit' />
 					</div>
 					<div id='personal'>
-					{['name', 'phone', 'address'].map((key) => (
+						{['name', 'phone', 'address'].map((key) => (
 							<Input
-								legend={key === 'name' ? 'Full Name' : key}
-								placeholder={key}
+								legend={key.charAt(0).toUpperCase() + key.slice(1)}
+								placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
 								id={key}
 								name={key}
 								value={formValues[key]}
@@ -86,7 +86,7 @@ function App() {
 				</div>
 				<div id='cv'>
 					<div id='personal'>
-					{['name', 'phone', 'address'].map((key) => (
+						{['name', 'phone', 'address'].map((key) => (
 							<div className='display' key={key}>
 								{displayValues[key]}
 							</div>
