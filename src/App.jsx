@@ -40,14 +40,13 @@ function App() {
 						<Button handleClick={resetDisplay} text='Edit' />
 					</div>
 					<div id='personal'>
-						{Object.entries(formValues).map(([key, value]) => (
+					{['name', 'phone', 'address'].map((key) => (
 							<Input
-					
 								legend={key === 'name' ? 'Full Name' : key}
-								placeholder={key === 'name' ? 'Name' : key}
+								placeholder={key}
 								id={key}
 								name={key}
-								value={value}
+								value={formValues[key]}
 								onChange={(e) => handleChange(key, e.target.value)}
 							/>
 						))}
