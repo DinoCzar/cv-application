@@ -86,9 +86,9 @@ function App() {
 				</div>
 				<div id='cv'>
 					<div id='personal'>
-						{Object.entries(displayValues).map(([key, value]) => (
-							<div className='display' key={key} id={`display-${key}`}>
-								{value}
+					{['name', 'phone', 'address'].map((key) => (
+							<div className='display' key={key}>
+								{displayValues[key]}
 							</div>
 						))}
 					</div>
