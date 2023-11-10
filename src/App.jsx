@@ -93,7 +93,7 @@ function App() {
 						))}
 					</div>
 					<div id='display-education'>
-						<div className="display">Education</div>
+						<div className='display-title'>Education</div>
 						{['firstSchool', 'secondSchool', 'thirdSchool'].map((key) => (
 							<div className='display' key={key}>
 								{displayValues[key]}
@@ -101,7 +101,7 @@ function App() {
 						))}
 					</div>
 					<div id='display-experience'>
-					<div className="display">Experience</div>
+						<div className='display-title'>Experience</div>
 						{['firstJob', 'secondJob', 'thirdJob'].map((key) => (
 							<div className='display' key={key}>
 								{displayValues[key]}

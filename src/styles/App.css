@@ -39,6 +39,11 @@ div {
     text-align: center;
 }
 
+.display-title {
+    text-align: center;
+	font-weight: bold;
+}
+
 .section {
     text-align: center;
 }
