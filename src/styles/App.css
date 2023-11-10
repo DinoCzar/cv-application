@@ -9,20 +9,22 @@ body {
 }
 
 div {
-	border: solid;
-	border-width: 1px;
 	padding: 5px;
+	border-radius: 10px;
 }
 
 #container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1.5fr;
 	gap: 10px;
 }
 
 #cv {
 	display: grid;
 	align-content: start;
+	border: solid;
+	border-color: #082f49;
+	border-width: 2px;
 }
 
 #personal {
